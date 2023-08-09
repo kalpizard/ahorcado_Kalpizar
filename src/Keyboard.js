@@ -3,21 +3,23 @@ class Keyboard {
     this.keys = ["A","B","C","D","E","F","G","H","I","J","K","L",
     "M","N","Ñ","O","P","Q","R","S","T","V","W","X","Y","Z",
     ];
-    this.keys2 = this.keys.map((key, index) => {
+    this.keys2 = this.keys.map((key, index) => {  //hace un mapeo de cada elemento del arreglo 
       return {
-        id: index + 1,
-        letter: key,
-        state: false,
+        id: index + 1, //parametro index
+        letter: key,   //parametro key 
+        state: false,  // estado default 
       };
     });
   }
 
-  createKeyboard() {
+  createKeyboard() {    //
     return this.keys2;
   }
 }
 
 export { Keyboard };
+
+
 
 
 

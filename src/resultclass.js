@@ -19,3 +19,8 @@ class Result{
 
 const App = new Result();
 appendFile.showResult(true);
+
+
+
+
+export { BodyParts };

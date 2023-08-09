@@ -1,40 +1,23 @@
-/* .contenedor {
-    display: flex;
-    flex-wrap: wrap;
-    position: absolute;
-    bottom: 0;
-
-    background-color: blue;
-
-  } */
-
-  
-.papacaja{
-    width: 100%;
-    height: 100%;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     margin-top: 270px;
-     justify-content: space-around;
-}
-
-/* 
-
-.contenedorLetras {
+/* Este archivo deberá ir en la carpeta styles y deberá contener todos los estilos que necesites.
+En esta tarea podríamos linkear este archivo con el archivo htnl ya creado anteriormente. */
+.papacaja {
+  width: 100%;
+  height: 100%;
   display: flex;
-  text-align: right;
-} */
-
+  align-items: center;
+  justify-content: center;
+  margin-top: 310px;
+  justify-content: space-around;
+}
 
 #keyboard {
   display: flex;
   flex-wrap: wrap;
   position: absolute;
   bottom: 0;
-  /* margin-left: 6%;
-  margin-right: 6%; */
-} 
+  padding-inline: 10%;
+  margin-bottom: 5%;
+}
 
 .divLetras {
   /* margin: 10px; */
@@ -42,6 +25,18 @@
   border: 6px rgb(205, 217, 222) dashed;
   color: rgb(255, 255, 255);
   border-radius: 40px;
-  padding: 17px;
+  padding: 13px;
+}
 
+.line {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  /* /* margin-left: 40%; */
+  /* font-size: 500%;
+  padding-left: 10%;
+  max-width: 500%; */
+}
+.divespacios {
+  margin-right: 30px;
 }

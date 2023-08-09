@@ -1,15 +1,23 @@
 // const { buffer } = require("stream/consumers");
 
-class BodyParts {
-  constructor() {
+// Crea en la carpeta src una Clase BodyParts.
+
+// Esta clase deberá tener  como propiedad un arreglo de
+//  imagenes(Las imagenes que ya agregaste en uno de los 
+//   tiquetes anteriores).
+// Además deberá tener una función encargada de actualizar 
+// la imagen según los intentos que vayan quedando.
+
+class BodyParts { //BodyParts class
+  constructor() {  //BodyParts constructor 
     this.VectImages = [
-      "../assets/images/1.png",
-      "../assets/images/2.png",
-      "../assets/images/3.png",
-      "../assets/images/4.png",
-      "../assets/images/5.png",
-      "../assets/images/6.png",
-      "../assets/images/7.png",
+      "../assets/images/1.png", // image 1
+      "../assets/images/2.png", // image 2
+      "../assets/images/3.png", // image 3
+      "../assets/images/4.png", // image 4
+      "../assets/images/5.png", // image 5
+      "../assets/images/6.png", // image 6
+      "../assets/images/7.png", // image 7
     ];
   }
 
@@ -17,6 +25,39 @@ class BodyParts {
     return this.VectImages[num];
   }
 }
+
+// const photos = document.getElementById('');
+// Console.log();
+// const newBodyParts = new BodyParts();
+
+// const img = document.createElement('');
+// img.classList = ''
+// let conta = 0; 
+
+
+
+
+
+export { BodyParts };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // const photos = document.getElementById('photos');
 
@@ -36,5 +77,3 @@ class BodyParts {
 //     conta++;
 
 // })
-
-export { BodyParts };
