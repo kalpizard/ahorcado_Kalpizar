@@ -1,7 +1,7 @@
 class Keyboard {
   constructor() {
     this.keys = ["A","B","C","D","E","F","G","H","I","J","K","L",
-    "M","N","Ñ","O","P","Q","R","S","T","V","W","X","Y","Z",
+    "M","N","Ñ","O","P","Q","R","S","T","U","V","W","X","Y","Z"
     ];
     this.keys2 = this.keys.map((key, index) => {  //hace un mapeo de cada elemento del arreglo 
       return {

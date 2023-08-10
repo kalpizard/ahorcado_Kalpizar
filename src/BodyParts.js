@@ -26,18 +26,6 @@ class BodyParts { //BodyParts class
   }
 }
 
-// const photos = document.getElementById('');
-// Console.log();
-// const newBodyParts = new BodyParts();
-
-// const img = document.createElement('');
-// img.classList = ''
-// let conta = 0; 
-
-
-
-
-
 export { BodyParts };
 
 
@@ -56,6 +44,25 @@ export { BodyParts };
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+// const photos = document.getElementById('');
+// Console.log();
+// const newBodyParts = new BodyParts();
+
+// const img = document.createElement('');
+// img.classList = ''
+// let conta = 0; 
 
 
 
