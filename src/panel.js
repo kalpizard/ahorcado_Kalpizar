@@ -1,6 +1,13 @@
 class Panel {
   constructor() {
-    this.dictionary = ["house", "father", "computer", "trello", "javascript", "hola"]; //array words
+    this.dictionary = [
+      "house",
+      "father",
+      "computer",
+      "trello",
+      "javascript",
+      "hola",
+    ]; //array words
     this.choiseword = []; //random words
     this.lasLetter = "";
     this.VectAnswer = [];
@@ -11,15 +18,16 @@ class Panel {
     // ['_','_','_','_','_','_']
   }
   drawLines() {
-    // const long = word.lenght  
+    // const long = word.lenght
 
-    const id = Math.floor(Math.random() * (this.dictionary.length - 0), 0); 
-    this.choiseword = Array.from(this.dictionary[id]);                                //escoge palabras random del arreglo
+    const id = Math.floor(Math.random() * (this.dictionary.length - 0), 0);
+    this.choiseword = Array.from(this.dictionary[id]); //escoge palabras random del arreglo
     console.log(this.choiseword);
 
-    for (let index = 0; index < this.choiseword.length; index++) {                   //ciclo que recorre el arreglo
+    for (let index = 0; index < this.choiseword.length; index++) {
+      //ciclo que recorre el arreglo
       console.log("_");
-      this.VectAnswer.push("_");                                                     //sustituye las letras del areglo por guiones bajos
+      this.VectAnswer.push("_"); //sustituye las letras del areglo por guiones bajos
     }
     return this.VectAnswer;
   }
@@ -33,49 +41,21 @@ class Panel {
     console.log(this.VectAnswer);
   }
 
-  checkwork(letter) {
-    this.choiseword -
-      FileSystemEntry((word, index) => {
-        if (word === letter) {
-          console.log(index);
-          this.VectAnswer[index] = letter;
-        }
-      });
+  checkwork(letter, posi) {
+    for (let index = posi; index < this.choiseword.length; index++) {
+      if (this.choiseword[index] == letter.toLowerCase()) {
+        return true;
+      }
+    }
 
-    return;
+    console.log(this.VectAnswer);
   }
+  // function checkletter() {
+
+  // }
 }
+
 export { Panel };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // class Panel {
 //   constructor() {

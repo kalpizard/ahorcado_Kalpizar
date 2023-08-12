@@ -6,17 +6,21 @@ import clickBtn from "./events.js";
 import { Panel } from "./panel.js";
 import { BodyParts } from "./BodyParts.js";
 
-const App = new Keyboard();                                           //llamamos la clase
-const Panels = new Panel();                                           //llamamos la clase
+const App = new Keyboard(); //llamamos la clase
+const Panels = new Panel(); //llamamos la clase
+const Body = new BodyParts(); //llamamos la clase
+let count = 1;
+let counts = 0;
+// let turnos = 7;
 
 const vectorLetras = App.createKeyboard();
-const vectorDeLineas = Panels.drawLines();                            //guardams el vector con lineas
+const vectorDeLineas = Panels.drawLines(); //guardams el vector con lineas
 
 const keyboard = document.getElementById("keyboard");
 const panel = document.getElementById("panel");
 
-
-vectorDeLineas.map((pan) => {                                         //recorremos linea por linea del vector pan
+vectorDeLineas.map((pan) => {
+  //recorremos linea por linea del vector pan
   console.log(pan);
   const line = document.createElement("h2");
   line.textContent = pan;
@@ -24,16 +28,32 @@ vectorDeLineas.map((pan) => {                                         //recorrem
   panel.appendChild(line);
 });
 
-vectorLetras.map((key) => {                                          //recorremos linea por linea
-  const btn = document.createElement("button");                      //constante para el boton
-  btn.textContent = key.letter;                                      //contenido del boton
-  btn.className = "divLetras";                                       //clase
+const img = document.getElementById("imgagenahorcado");
+
+vectorLetras.map((key) => {
+  //recorremos linea por linea
+  const btn = document.createElement("button"); //constante para el boton
+  btn.textContent = key.letter; //contenido del boton
+  btn.className = "divLetras"; //clase
 
   btn.addEventListener("click", () => {
-    console.log(Panels.chooseword(btn.textContent));
-    panel.textContent = '';
+    Panels.chooseword(btn.textContent);
+    panel.textContent = "";
 
-    vectorDeLineas.map((pan) => {                                    //recorremos linea por linea del vector pan
+    const verifica = Panels.checkwork(btn.textContent, counts);
+    if (verifica) {
+      // counts++;
+    } else {
+      img.src = Body.nextImage(count);
+      count++;
+      // turnos--;
+      // if(turnos == 0){
+
+      // }
+    }
+
+    vectorDeLineas.map((pan) => {
+      //recorremos linea por linea del vector panel
       console.log(pan);
       const line = document.createElement("h2");
       line.textContent = pan;
@@ -42,5 +62,5 @@ vectorLetras.map((key) => {                                          //recorremo
     });
   }); //evento click
 
-  keyboard.appendChild(btn);                                         //boton dentro del keyboard
+  keyboard.appendChild(btn); //boton dentro del keyboard
 });

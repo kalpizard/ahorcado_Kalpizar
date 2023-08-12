@@ -56,6 +56,8 @@ export { BodyParts };
 
 
 
+
+
 // const photos = document.getElementById('');
 // Console.log();
 // const newBodyParts = new BodyParts();
