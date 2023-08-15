@@ -10,17 +10,9 @@ class Result{
            return this.message = 'Victoria'
 
         } else {
-          return this.message = 'perdiste'
+          return this.message = 'Perdiste, Vuelve a intertarlo'
         }
     }
-
-
 }
 
-const App = new Result();
-appendFile.showResult(true);
-
-
-
-
-export { BodyParts };
+export { Result };
