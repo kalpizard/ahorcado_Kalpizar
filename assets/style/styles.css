@@ -1,32 +1,30 @@
+.todo {
+  margin-top: 320px;
+}
+
 body {
-  background: #ffefba; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #ffffff,
-    #ffefba
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #ffffff,
-    #ffefba
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-image: url("../images/estadio.webp");
+  background-repeat: no-repeat;
+  background-size: 1536px 739px;
 }
 
 .papacaja {
   display: flex;
   align-items: flex-end;
-  justify-content: center;
+  justify-content: normal;
+
+  margin-left: 10%;
+  margin-top: -7%;
 }
 
 .contenedorKeys {
   margin-top: 40px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
 }
 
 #keyboard {
-  width: 60%;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -38,8 +36,8 @@ body {
   color: rgb(255, 255, 255);
   font-size: 20px;
   /* border-radius: 40px; */
-  padding: 20px;
-  margin: 10px;
+  padding: 10px;
+  margin: 8px;
 }
 
 .divLetras:hover {
