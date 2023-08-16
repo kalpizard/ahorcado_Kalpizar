@@ -1,9 +1,9 @@
 //IMPORTACION DE ARCHIVOS LOCALES
-import { Result } from "./resultclass.js"; //NUEVO
-import { Keyboard } from "./Keyboard.js";
-import clickBtn from "./events.js";
-import { Panel } from "./panel.js";
-import { BodyParts } from "./BodyParts.js";
+import { Result } from "./components/resultclass.js"; //NUEVO
+import { Keyboard } from "./components/Keyboard.js";
+import clickBtn from "./components/events.js";
+import { Panel } from "./components/panel.js";
+import { BodyParts } from "./components/BodyParts.js";
 //SE CREAN LAS INSTANCIAS
 const alerta = new Result(); //NUEVO
 const App = new Keyboard(); //LLAMAMOS LA CLASE
@@ -31,7 +31,6 @@ const turn = document.getElementById("turnos");
 
 vectorLetras.map((key) => {
   //RECORRE EL VECTOR LETRAS
-  
 
   const btn = document.createElement("button"); ////CONSTANTE PARA EL BOTON
   btn.textContent = key.letter; //contenido del boton
