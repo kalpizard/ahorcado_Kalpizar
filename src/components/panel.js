@@ -16,13 +16,23 @@ class Panel {
     // ['_','_','_','_','_','_']
   }
 
+//POKEMON
+nombrePokemon(nombre){
+  return  this.choiseword = Array.from(nombre); //ARRAY DE LETRAS(DE DICCIONARY[INDEX]);
+
+
+
+}
+
+
+
   //LINES _ _ _ _ _
   drawLines() {
     //METODO DE LA CLASE PANEL
 
-    const id = Math.floor(Math.random() * (this.dictionary.length - 1)); //(NUMERO ALEATORIO * DE DICCIONARY )
-    this.choiseword = Array.from(this.dictionary[id]); //ARRAY DE LETRAS(DE DICCIONARY[INDEX]);
-    console.log(this.choiseword);
+    // const id = Math.floor(Math.random() * (this.dictionary.length - 1)); //(NUMERO ALEATORIO * DE DICCIONARY )
+    // this.choiseword = Array.from(this.dictionary[id]); //ARRAY DE LETRAS(DE DICCIONARY[INDEX]);
+    // console.log(this.choiseword);
 
     for (let index = 0; index < this.choiseword.length; index++) {
       //(INICIO 0;  MENOR AL TAMAÑO DE PALABRA;  REPETICIONES)
@@ -67,5 +77,10 @@ class Panel {
     }
   }
 }
+
+// choisePokemon(){
+
+// }
+
 
 export { Panel };

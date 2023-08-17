@@ -13,6 +13,13 @@ class Result{
           return this.message = 'Perdiste, Vuelve a intertarlo'
         }
     }
+
+}
+
+export { Result };
+
+
+
 //     reinicio(){
 //    document.getElementById('verifica').textContent='you lose'
 
@@ -28,6 +35,3 @@ class Result{
 
 
 //     }
-}
-
-export { Result };

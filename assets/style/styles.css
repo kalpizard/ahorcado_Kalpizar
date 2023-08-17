@@ -6,40 +6,28 @@
 }
 body {
   background-image: url("../images/estadio.webp");
-  background-size: 2304px 1109px;
+  background-size: 2900px 1432px;
   background-repeat: no-repeat;
   padding: 0;
   margin: 0;
 }
-/* 
-.restador {
-  width: 200px;
-  height: 200px;
-}
- */
-
 
 .temporizador {
   display: flex;
- 
+
   height: 330px;
-  
+
   justify-content: center;
-  /* margin-top: 160px; */
-  
 }
 
 .temprueba {
+  margin-top: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 30%;
-  /* padding-top: 340px; */
-  /* padding-bottom: 400px; */
-  /* background-color: blue; */
+
   right: 0;
-  /* position: absolute; */
-  /* bottom: 0; */
 }
 
 #keyboard {
@@ -52,11 +40,7 @@ body {
   background-color: rgb(199, 207, 209);
   border: 3px rgb(93, 82, 82) calc;
   color: rgb(0, 0, 0);
-  font-size: 34px;
-  
-
-  /* padding: 10px;
-  margin: 8px; */
+  font-size: 47px;
 }
 
 .divLetras:hover {
@@ -68,14 +52,13 @@ body {
 }
 .divespacios {
   margin: 10px;
-  font-size: 40px;
-  color: #ffffff;
+  font-size: 90px;
+  color: #000000;
 }
 
 .images {
   width: 300px;
   height: 300px;
-  /* margin-left: 100px; */
 }
 
 .contador {
@@ -94,7 +77,7 @@ body {
 .elements_container {
   width: 100%;
   display: flex;
-  margin-top: 240px;
+
   align-items: center;
   justify-content: end;
   flex-direction: column;
@@ -103,7 +86,7 @@ body {
 .imagen {
   width: 45%;
   z-index: 1;
-  left: 140px;
+  left: 110px;
   bottom: 280px;
   position: absolute;
 }
@@ -111,8 +94,9 @@ body {
 .papacaja {
   width: 100%;
   display: flex;
-  margin-bottom: 115px;
+  margin-bottom: 98px;
   justify-content: center;
+  margin-top: 17px;
 }
 
 .contenedorKeys {
@@ -120,5 +104,35 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom:0px;
+  margin-bottom: 0px;
 }
+
+#pista {
+  /* margin-top: 100px; */
+  margin-left: 695px;
+  /* width: 120px;
+  height: 120px; */
+}
+
+.tamaño {
+  width: 400px;
+  height: 400px;
+}
+
+
+.Correcta{
+  /* background-color: rgb(199, 207, 209); */
+  border: 3px rgb(93, 82, 82) calc;
+  color: rgb(0, 0, 0);
+  font-size: 47px;
+  background-color: #6be585;
+  transform: scale(1.2);
+  }
+  .Incorrecta{
+    /* background-color: rgb(199, 207, 209); */
+    border: 3px rgb(93, 82, 82) calc;
+    color: rgb(0, 0, 0);
+    font-size: 47px;
+  background-color: #dd3e54;
+  transform: scale(1.3);
+  }
