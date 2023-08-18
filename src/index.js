@@ -5,6 +5,7 @@ import clickBtn from "./components/events.js";
 import { Panel } from "./components/panel.js";
 import { BodyParts } from "./components/BodyParts.js";
 import { Pokemon } from "./api/index.js"; //POKEMON
+// import { updateCountdown } from "./components/countdown.js";
 //SE CREAN LAS INSTANCIAS
 const pokemones = new Pokemon(); //POKEMON
 const alerta = new Result(); //NUEVO
@@ -24,17 +25,14 @@ let turnos = 6; //TURNOS
 async function recolecta() {
   const espera = await pokemones.obtenerDatosAwait();
   console.log(espera.name);
-
   console.log(Panels.nombrePokemon(espera.name));
   const div = document.createElement("div");
   const imgs = document.createElement("img");
-
   imgs.classList = "tamaño";
+  imgs.id = "pokemonimg";
   imgs.src = espera.sprites["front_default"];
   pista.appendChild(imgs);
-
   const vectorDeLineas = Panels.drawLines(); //GUARDAMOS EL VECTOR CON LNEAS
-
   // recuperamos.appendChild(img)
   vectorDeLineas.map((pan) => {
     //RECORRE LINEA POR LINEA DEL VECTOR PAN
@@ -43,17 +41,13 @@ async function recolecta() {
     line.className = "divespacios";
     panel.appendChild(line);
   });
-
   const img = document.getElementById("imgagenahorcado");
   const turn = document.getElementById("turnos");
-
   vectorLetras.map((key) => {
     //RECORRE EL VECTOR LETRAS
-
     const btn = document.createElement("button"); ////CONSTANTE PARA EL BOTON
     btn.textContent = key.letter; //contenido del boton
     btn.className = "divLetras"; //clase
-
     btn.addEventListener("click", () => {
       //EVENTO CLICK EN CADA BOTON
       Panels.chooseword(btn.textContent); //INSTANCIA PANEL.METODO CHOOSEWORD(CONTENIDO BTN)
@@ -62,12 +56,10 @@ async function recolecta() {
       const verifica = Panels.checkwork(btn.textContent, counts); //RESULTADO = INSTANCIA.METODO(CONTENIDO BTN, ARGUMENTO)
       const isWinOrisDefeat = Panels.showifisWin(); //METODO = INSTANCIA.ALMACENA
 
-
-
       if (verifica) {
         btn.classList = "letter Correcta"; //verdeeeeeee
 
-        if (isWinOrisDefeat) {
+        if (isWinOrisDefeat ) {
           //SI GANÓ EL JUEGO
           alert(alerta.showResult(isWinOrisDefeat)); //ALERTA DE VICTORIA DE INSTANCIA.METODO
         }
@@ -77,7 +69,13 @@ async function recolecta() {
           //NO MÁS INTENTOS
           // img.src = Body.nextImage(6); //RESULTADO = INSTANCIA.METODO
           turn.textContent = 0; //AL TERMINAR SE ESTABLECE EN 0
-          alert(alerta.showResult(verifica)); //ALERTA NO QUEDAN MAS TURNOS
+          //alert(alerta.showResult(verifica)); //ALERTA NO QUEDAN MAS TURNOS
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Something went wrong!',
+            footer: '<a href="">Why do I have this issue?</a>'
+          })
         } else {
           turn.textContent = turnos; //TURNOS RESTANTES
           turnos--; //REDUCE LO TURNOS
@@ -85,7 +83,6 @@ async function recolecta() {
           count++; //CONTADOR DE IMAGENES AUMENTA
         }
       }
-
       vectorDeLineas.map((pan) => {
         //RECORRE LINEA POR LINEA DEL VECTOR PANEL
         const line = document.createElement("h2"); //CREA ELEMENTO H2 Y LO ALMACENA EN LINE
@@ -100,3 +97,18 @@ async function recolecta() {
 }
 
 recolecta();
+
+const botonpista = document.getElementById("botonpista");
+
+botonpista.addEventListener("click", function () {
+  const pokemon = document.getElementById("pokemonimg");
+  console.log(pokemon);
+  pokemon.classList = "showPokemon";
+});
+
+
+const reset = document.getElementById('reset');
+
+reset.addEventListener('click', function() {
+    location.reload();
+});
